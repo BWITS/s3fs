@@ -11,7 +11,6 @@ RUN apk --update add fuse alpine-sdk automake autoconf libxml2-dev fuse-dev curl
   && ./configure --prefix=/usr \
   && make \
   && make install \
-  && apk del alpine-sdk automake autoconf \
   && rm -rf /var/cache/apk/* 
 
 CMD ["/bin/sh"]
